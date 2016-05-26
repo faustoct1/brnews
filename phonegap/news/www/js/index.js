@@ -135,7 +135,7 @@ function pushNotification(enable, callback){
       var push = null
       var push = PushNotification.init({
           android: {
-              senderID: "696546624447"
+              senderID: ""
           },
           ios: {
               alert: "true",
@@ -247,7 +247,7 @@ function adSetup(){
   var admobid = {};
   if( /(android)/i.test(navigator.userAgent) ) {
       admobid = { // for Android
-          banner: 'ca-app-pub-2932594016137124/1802206899',
+          banner: '',
           interstitial: ''
       };
   } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
