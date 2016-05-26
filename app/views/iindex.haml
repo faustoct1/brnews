@@ -1,0 +1,110 @@
+!!!
+%html{:lang => "en"}
+  %head
+
+    %title brNEWS - As principais notícias do Brasil em tempo real na internet.org
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport", "initial-scale"=>1, "maximum-scale"=>1, "minimum-scale"=>1, "user-scalable"=>"no"}
+    %meta{content: "Veja notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país disponível internet.org", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://www.brnews.co", property: "og:url"}
+    %meta{content: "As principais notícias do Brasil em tempo real disponível internet.org", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "Veja notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país disponível internet.org", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "/css/index.css"
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48117181-1', 'auto');
+      ga('send', 'pageview');
+
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+      .container
+        .navbar-header
+          %a.navbar-brand{:href => "/"}
+            %b brNEWS
+          %a.navbar-brand{:href => "http://ifeed.brnews.co"} News
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => "/sobre"} Sobre
+            %li
+              %a{:href => "/termos"} Termos
+            %li
+              %a{:href => "/privacidade"} Privacidade
+
+    .container
+      .row#first
+        .col-md-12
+          %div
+            %div
+              %h1 brNEWS
+            %h3 As principais notícias do Brasil em tempo real!
+            %h3 Confira as notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país.
+          %div
+            %a{href:"https://play.google.com/store/apps/details?id=com.linked4"}
+              %img.play{alt:"Baixe no Google Play", src:"https://developer.android.com/images/brand/pt-br_generic_rgb_wo_45.png"}
+          %div
+            %a.try.btn.btn-primary.btn-lg.btn-call{:href => "http://ifeed.brnews.co"} Tente agora
+
+      .row
+        %hr
+
+      .row#third
+        .sec-t
+          .col-xs-12
+            %h2 <span class="glyphicon glyphicon-equalizer title-equalizer"> </span> Veja as principais notícias das melhores fontes
+        %div
+          .col-xs-12.col-sm-7.col-lg-5.col-md-5
+            .list-group
+              .list-group-item.active
+                %h4.list-group-item-heading Últimas notícias
+              -topicn = _topicn(@appetizers[0])
+
+              %a.list-group-item.list-group-item-success{href:"http://ifeed.brnews.co"}
+                %h5.list-group-item-heading #{@appetizers[0]['title'][0..85] + (' ...')}
+                %small <span class="topic">#{topicn}</span> - <span class="source">#{@appetizers[0]['fb_from_name']}</span><!--span> - </span><span class="ago"> </span-->
+
+              -topicn = _topicn(@appetizers[1])
+
+              %a.list-group-item.list-group-item-warning{href:"http://ifeed.brnews.co"}
+                %h5.list-group-item-heading #{@appetizers[1]['title'][0..85] + (' ...')}
+                %small <span class="topic">#{topicn}</span> - <span class="source">#{@appetizers[1]['fb_from_name']}</span><!--span> - </span><span class="ago"> </span-->
+
+              -topicn = _topicn(@appetizers[2])
+
+              %a.list-group-item.list-group-item-info{href:"http://ifeed.brnews.co"}
+                %h5.list-group-item-heading #{@appetizers[2]['title'][0..85] + (' ...')}
+                %small <span class="topic">#{topicn}</span> - <span class="source">#{@appetizers[2]['fb_from_name']}</span><!--span> - </span><span class="ago"> </span-->
+
+              %a.list-group-item{href:'https://play.google.com/store/apps/details?id=com.linked4'}
+                %h4.list-group-item-heading Baixe no GooglePlay
+
+      .row
+        %hr
+
+      .row#last
+        .sec-t
+          .col-xs-12
+            %h2.text-center{style:'margin-bottom:20px'} <span class="glyphicon glyphicon-download"> </span> Baixe agora no seu celular
+        .row{style:'float: none; margin: 0 auto; text-align: center;'}
+          .col-xs-12
+            %a{href:"https://play.google.com/store/apps/details?id=com.linked4"}
+              %img.play{alt:"Baixe no Google Play", src:"https://developer.android.com/images/brand/pt-br_generic_rgb_wo_45.png"}
+      .row
+        %hr
+    .container-fluid
+      .row-fluid
+        %footer
+          .row
+            .col-lg-12.text-center
+              %p Copyright © brNEWS 2015

@@ -1,0 +1,114 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"ios-package\" value=\"UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"ios-package\" value=\"CDVAdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "UIBackgroundModes": [
+                        {
+                            "xml": "<array><string>remote-notification</string></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.linked4"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.linked4"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.linked4"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.linked4"
+        },
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "com.linked4"
+        },
+        "phonegap-plugin-push": {
+            "PACKAGE_NAME": "com.linked4"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-network-information/www/network.js",
+            "id": "cordova-plugin-network-information.network",
+            "pluginId": "cordova-plugin-network-information",
+            "clobbers": [
+                "navigator.connection",
+                "navigator.network.connection"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+            "id": "cordova-plugin-network-information.Connection",
+            "pluginId": "cordova-plugin-network-information",
+            "clobbers": [
+                "Connection"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+            "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+            "pluginId": "cordova-plugin-google-analytics",
+            "clobbers": [
+                "analytics"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-admob/www/AdMob.js",
+            "id": "cordova-plugin-admob.AdMob",
+            "pluginId": "cordova-plugin-admob",
+            "clobbers": [
+                "window.AdMob"
+            ]
+        },
+        {
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "id": "phonegap-plugin-push.PushNotification",
+            "pluginId": "phonegap-plugin-push",
+            "clobbers": [
+                "PushNotification"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.0.0",
+        "cordova-plugin-network-information": "1.0.1",
+        "cordova-plugin-google-analytics": "0.8.1",
+        "cordova-plugin-extension": "1.1.4",
+        "cordova-plugin-admob": "2.11.1",
+        "phonegap-plugin-push": "1.5.3"
+    }
+}

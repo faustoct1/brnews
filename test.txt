@@ -1,0 +1,39 @@
+<ul>
+<li>Abril (Brasil)</li>
+<li>Asahi Shimbun (Japão)</li>
+<li>Atlantic Media (Estados Unidos)</li>
+<li>BBC (Reino Unido)</li>
+<li>BuzzFeed (Estados Unidos)</li>
+<li>Condé Nast (Estados Unidos)</li>
+<li>Daily Mail (Reino Unido)</li>
+<li>The Economist (Reino Unido)</li>
+<li>Editora Globo (Brasil)</li>
+<li>El País (Espanha)</li>
+<li>Farifax Media (Austrália)</li>
+<li>Folha de S.Paulo (Brasil)</li>
+<li>Financial Times (Reino Unido)</li>
+<li>Frankfurter Allgemenine (Alemanha)</li>
+<li>Gannett (Estados Unidos)</li>
+<li>The Guardian (Reino Unido)</li>
+<li>Hearst (Estados Unidos)</li>
+<li>The Huffington Post (Estados Unidos)</li>
+<li>La Stampa (Itália)</li>
+<li>Les Echos (França)</li>
+<li>Mainichi (Japão)</li>
+<li>Mashable (Estados Unidos)</li>
+<li>McClatchy (Estados Unidos)</li>
+<li>News Corp Australia (Austrália)</li>
+<li>New York Daily News (Estados Unidos)</li>
+<li>New York Post (Estados Unidos)</li>
+<li>The New York Times (Estados Unidos)</li>
+<li>NineMSN (Austrália)</li>
+<li>NRC Media (Holanda)</li>
+<li>Sankei (Japão)</li>
+<li>The Telegraph (Reino Unido)</li>
+<li>UOL (Brasil)</li>
+<li>U.S. News &amp; World Report (Estados Unidos)</li>
+<li>VOX Media (Estados Unidos)</li>
+<li>The Wall Street Journal (Estados Unidos)</li>
+<li>The Washington Post (Estados Unidos)</li>
+<li>Zeit Online (Alemanha)</li>
+</ul>

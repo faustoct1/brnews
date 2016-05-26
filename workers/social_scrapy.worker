@@ -1,0 +1,19 @@
+# define the runtime language, this can be ruby, java, node, php, go, etc.
+
+runtime 'ruby', '2.1'
+exec "social_scrapy.rb"
+
+gemfile '../Gemfile'
+
+file '../models/setting.rb'
+file '../models/source.rb'
+file '../models/source_topic.rb'
+file '../models/story.rb'
+file '../models/topic.rb'
+file '../models/user.rb'
+file '../models/user_topic.rb'
+file '../models/source_miss.rb'
+file '../config/database.rb'
+
+remote
+#build 'bundle install --standalone'

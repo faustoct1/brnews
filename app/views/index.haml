@@ -1,0 +1,251 @@
+!!!
+%html{:lang => "en", "ng-app"=>"home"}
+  %head
+
+    %title brNEWS - Jornal online agregador das últimas notícias em tempo real.
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport", "initial-scale"=>1, "maximum-scale"=>1, "minimum-scale"=>1, "user-scalable"=>"no"}
+    %meta{content: "O bom negócio das notícias. Agregador de notícias de política, economia, esporte, negócios e tecnologia das melhores fontes.", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://www.brnews.co", property: "og:url"}
+    %meta{content: "brNEWS é um jornal agregador online das últimas notícias em tempo real.", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "O bom negócio das notícias. Agregador de notícias de política, economia, esporte, negócios e tecnologia das melhores fontes.", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+    %meta{content: "723248877786841", property: "fb:app_id"}
+    %meta{content: "http://res.cloudinary.com/hpoyywmsy/image/upload/v1451948305/news_px1lke.jpg", property: "og:image"}
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lato:300,400,700"
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/bootstrap-social.min_unrc63.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/news-fb_qmtfct.css"
+
+    %script{:async=>"", src:"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-65575834-1', 'auto');
+      ga('send', 'pageview');
+
+  %body{"ng-controller"=>"InitHome"}
+    - if locals[:app]==true
+      #pageloading.hide
+
+    .wrapper
+      .box
+        .row-fluid.row-offcanvas.row-offcanvas-left
+          #main.col-sm-12.col-md-12.nopadl
+            .navbar.navbar-blue.navbar-static-top{style:"z-index:1001"}
+              .row
+                .col-xs-10.col-sm-9.col-md-5.col-lg-4.col-md-offset-3.col-lg-offset-4.col-sm-offset-2.col-xs-offset-1.lrg
+                  .navbar-header.pull-left
+                    %a.navbar-brand.logo{:href => "/"}
+                      %span.glyphicon.glyphicon-repeat
+
+                  .navbar-header.pull-left
+                    %a{href:'https://play.google.com/store/apps/details?id=com.linked4'}
+                      %img.play{alt:"Baixe no Google Play", src:"http://res.cloudinary.com/hpoyywmsy/image/upload/v1453726306/google-play-badge_a0p82p.png",style:"width:150px"}
+                  %ul.nav.pull-right
+                    %li
+                      %a.glyphicon.glyphicon-cog.opts.me{"data-toggle":"collapse", href:"#more", "aria-expanded":"false", "aria-controls":"more"}
+
+                  %ul.nav.more
+                    %li
+                      %div#more.collapse
+                        %p Somente os tópicos selecionados serão mostrados
+                        .container
+                          .row
+                            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+                              %form{action:"/feed", method:"post" }
+                                -@@topics.each do |t|
+                                  - disabled = locals[:topics].include?(t[:id]) ? 'disabled' : ''
+                                  %a.btn.btn-sm.btn-primary.clickable.more-btn{href: "#", "data-value":"#{t[:id]}", "data-type":"topics", class:"#{disabled}"} #{t[:name]}
+                                %button#savebtn.btn.btn-sm.btn-danger.more-btn{type:"submit"} Filtrar
+
+            .full.col-sm-12.col-md-12
+              .col-md-offset-1
+                .row-fluid
+                  #feedstory.col-md-12{"ng-controller"=>"NewsFeed", :topic=>"#{locals[:more].blank? ? '' : locals[:more][:stories][:stories].first.topic_id}"}
+                    %div{:class=>"row", :id=>"e0"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 clearfix lrg"}
+                        %div{:class=>"card-topic"}
+                          %ins{class:"adsbygoogle", style:"display:block", "data-ad-client"=>"ca-pub-2932594016137124", "data-ad-slot"=>"4772127690", "data-ad-format"=>"auto"}
+                          %br
+
+                    %br
+
+                    - unless @highlights.blank?
+                      %div{:class=>"row", :id=>"ex"}
+                        %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                          .panel.panel-default
+                            .panel-heading
+                              %h3.panel-title Em destaque
+
+                            .list-group
+                              -@highlights[:stories].each do |item|
+                                -topicn = _topicn(item)
+                                - if item['fb_full_pic'].blank?
+                                  %div
+                                    %a.card-topic{href:"#{item['fb_link']}", target:'_blank',class:"list-group-item","share-link"=>"#{item['qtitle']}"}
+                                      %div
+                                        %h5.list-group-item-text
+                                          %strong #{topicn}
+                                          /%span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                        %h4.list-group-item-text #{item['title']}
+                                        %h6.list-group-item-text #{item['fb_from_name']}
+                                      %span.btn.btn-social-icon.btn-facebook.shar.b{social:"fb", style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff"}
+                                        %i.fa.fa-facebook.b
+                                      %span.btn.btn-social-icon.btn-twitter.shar.b{social:"twt",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:45px;"}
+                                        %i.fa.fa-twitter.b
+                                      %span.btn.btn-social-icon.btn-google.shar.b{social:"gp",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:90px"}
+                                        %i.fa.fa-google-plus.b
+                                      %span.btn.btn-social-icon.btn-linkedin.shar.b{social:"lkd",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:135px"}
+                                        %i.fa.fa-linkedin.b
+                                      %span.fa.fa-envelope.shar.b{social:"mail",style:"position:absolute;bottom:0;top: initial;margin-bottom:8px;background-color:transparent;border-color:#fff;color:#fff;margin-left:180px"}
+
+
+                                - else
+                                  %div.oi
+                                    %a.card-topic{href:"#{item['fb_link']}", target:'_blank',class:"list-group-item","share-link"=>"#{item['qtitle']}",style:"background-image:url(#{item['fb_full_pic']});height: 300px;    text-shadow: 0 0 0.1px #000; color:#fff; background-repeat: no-repeat; background-size: 100% 100%;"}
+                                      %div.b
+                                        %h5.list-group-item-text
+                                          %strong #{topicn}
+                                          /%span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                        %h4.list-group-item-text #{item['title']}
+                                        %h6.list-group-item-text #{item['fb_from_name']}
+                                      %span.btn.btn-social-icon.btn-facebook.shar.b{social:"fb", style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff"}
+                                        %i.fa.fa-facebook.b
+                                      %span.btn.btn-social-icon.btn-twitter.shar.b{social:"twt",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:45px;"}
+                                        %i.fa.fa-twitter.b
+                                      %span.btn.btn-social-icon.btn-google.shar.b{social:"gp",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:90px"}
+                                        %i.fa.fa-google-plus.b
+                                      %span.btn.btn-social-icon.btn-linkedin.shar.b{social:"lkd",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:135px"}
+                                        %i.fa.fa-linkedin.b
+                                      %span.btn.btn-social-icon.btn-envelope.shar.b{social:"mail",style:"position:absolute;bottom:0;top: initial;margin-bottom:8px;background-color:transparent;border-color:#fff;color:#fff;margin-left:180px"}
+                                        %i.fa.fa-envelope.b
+
+                    %br
+
+                    - if locals[:more].blank?
+                      %div{:class=>"row", :id=>"e2"}
+                        %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 clearfix lrg"}
+                          .panel.panel-default
+                            .panel-heading
+                              %h3.panel-title Mural de notícias
+                    -else
+                      %div{:class=>"row", :id=>"e2"}
+                        %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 clearfix lrg"}
+                          .panel.panel-default
+                            .panel-heading
+                              %h3.panel-title Notícias de #{locals[:more][:topic]}
+
+                    #feed
+                      - unless locals[:more].blank?
+                        - locals[:more][:stories][:stories].each do |story|
+                          .row
+                            .col-xs-12.col-sm-9.col-md-6.col-lg-5.col-md-offset-2.col-lg-offset-3.col-sm-offset-2.clearfix.lrg
+                              - if story.fb_full_pic
+                                %a.card-topic.btn-topic2{href:"#{story.fb_link}", target:"_blank","share-link"=>"#{story.qtitle}"}>
+                                  .panel-default.panel
+                                    .panel-body
+                                      .rich-content
+                                        %div
+                                          %strong #{locals[:more][:topic]}
+                                          %span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                        .row
+                                          .col-md-12.col-lg-12.col-sm-12.col-xs-12
+                                            %strong
+                                              %h4.titlecard #{story.title}
+                                        %div
+                                          <small> #{story.fb_from_name}</small><small> </small>
+                              - else
+                                %a.card-topic{href:"#{story.fb_link}", target:'_blank',class:"list-group-item","share-link"=>"#{story.qtitle}",style:"background-image:url(#{story.fb_full_pic});height: 300px;    text-shadow: 0 0 0.1px #000; color:#fff; background-repeat: no-repeat; background-size: 100% 100%;"}
+                                  .panel-default.panel
+                                    .panel-body
+                                      .rich-content
+                                        %div
+                                          %strong #{locals[:more][:topic]}
+                                          %span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                        .row
+                                          .col-md-12.col-lg-12.col-sm-12.col-xs-12
+                                            %strong
+                                              %h4.titlecard #{story.title}
+                                        %div
+                                          <small> #{story.fb_from_name}</small><small> </small>
+
+
+                    #feedloading.hide
+
+    %script{:src => "//code.jquery.com/jquery-2.1.4.min.js"}
+    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"}
+    %script{:src => "//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/extra.min_m9mwe5.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/time.min_k8wvkc.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/FeedFactory-fb.min_nfhxns.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/home_pi3nno.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/waiting-bootstrap_eyigdg.js"}
+
+    :javascript
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      $('#sharebrnews').click(function(e){
+        $('#sharemodal').modal().show()
+      })
+
+      var options = {topics:[#{locals[:topics].join(',')}]};
+      $('#more a').click(function(e){
+        event.preventDefault();
+        event.stopPropagation();
+
+        var has = $(this).hasClass("disabled")
+        if(has){
+          $(this).removeClass('disabled')
+          var array=options[$(this).data('type')];
+          var i = array.indexOf($(this).data('value'));
+          if(i != -1) array.splice(i, 1);
+          options[$(this).data('type')]=array;
+        }
+        else{
+          $(this).addClass('disabled')
+          options[$(this).data('type')].push($(this).data('value'));
+        }
+
+        if(options.topics.length==0){
+          $('#savebtn').addClass('disabled');
+          //$('.logo').removeClass('logo-animation')
+        }else{
+          //if(!$('.logo').hasClass('logo-animation')) $('.logo').addClass('logo-animation')
+          $('#savebtn').removeClass('disabled');
+        }
+      });
+
+      $('form').submit(function(){
+        $('<input type="hidden" name="json"/>').val(JSON.stringify(options)).appendTo('form')
+
+        var submit= true;
+        var msg = "Pelo menos 1 tópico selecionado.";
+
+        if(options['topics'].length<1) {
+          submit=false;
+        }
+
+        if(!submit)alert(msg);
+        else waitingDialog.show('Criando seu Feed de Notícias', {dialogSize: 'sm'});
+
+        return submit;
+      });
+
+      //$("div.navbar-static-top").autoHidingNavbar();

@@ -1,0 +1,171 @@
+!!!
+%html{:lang => "en"}
+  %head
+
+    %title brNEWS - Agregador de notícias em tempo real.
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport", "initial-scale"=>1, "maximum-scale"=>1, "minimum-scale"=>1, "user-scalable"=>"no"}
+    %meta{content: "Veja notícias de política, economia, esporte, negócios e tecnologia das melhores fontes", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://www.brnews.co", property: "og:url"}
+    %meta{content: "Agregador das principais notícias do Brasil em tempo real.", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "Personalize seu feed de notícias com as notícias das principais fontes do país.", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lato:300,400,700"
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/bootstrap-social.min_unrc63.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/news-fb_qmtfct.css"
+
+    %script{:async=>"", src:"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-65575834-1', 'auto');
+      ga('send', 'pageview');
+
+    :plain
+      <!-- Facebook Conversion Code for Visualizações da página principal - brNEWS -->
+      <script>(function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+          var fbds = document.createElement('script');
+          fbds.async = true;
+          fbds.src = '//connect.facebook.net/en_US/fbds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(fbds, s);
+          _fbq.loaded = true;
+        }
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6043509073580', {'value':'0.00','currency':'BRL'}]);
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6043509073580&amp;cd[value]=0.00&amp;cd[currency]=BRL&amp;noscript=1" /></noscript>
+
+  %body
+    .wrapper
+      .box
+        .row-fluid.row-offcanvas.row-offcanvas-left
+          #main.col-sm-12.col-md-12.nopadl
+            .navbar.navbar-blue.navbar-static-top
+              .row
+                .col-xs-10.col-sm-9.col-md-5.col-lg-4.col-md-offset-3.col-lg-offset-4.col-sm-offset-2.col-xs-offset-1
+                  .navbar-header.pull-left
+                    %a.navbar-brand.logo{:href => "/"}
+                      %span.glyphicon.glyphicon-repeat
+                  .navbar-header.pull-left
+                    %a{href:'https://play.google.com/store/apps/details?id=com.linked4'}
+                      %img{src:'https://developer.android.com/images/brand/pt-br_generic_rgb_wo_45.png',style:'margin: 5px;'}
+
+            .full.col-sm-12.col-md-12
+              .col-md-offset-1
+                .row-fluid
+                  #feedstory.col-md-12
+                    %div{:class=>"row", :id=>"e0"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        %div{:class=>"card-topic"}
+                          %ins{class:"adsbygoogle", style:"display:block", "data-ad-client"=>"ca-pub-2932594016137124", "data-ad-slot"=>"4772127690", "data-ad-format"=>"auto"}
+                          :javascript
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                          %br
+
+                    %div{:class=>"row", :id=>"e1"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        %a.btn.btn-default{href:"/feed", class:"list-group-item"} Ver meu mural com todas as notícias
+                        %br
+
+                    %div{:class=>"row", :id=>"e2"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        .panel.panel-default
+                          .panel-heading
+                            %h3.panel-title Em destaque
+
+                          .list-group
+                            -more=locals[:more]
+                            -more[:stories].each do |item|
+                              -topicn = _topicn(item)
+                              - if item['fb_full_pic'].blank?
+                                %div
+                                  %a.card-topic{href:"#{item['fb_link']}", target:'_blank',class:"list-group-item","share-link"=>"#{item['qtitle']}"}
+                                    %div
+                                      %h5.list-group-item-text
+                                        %strong #{topicn}
+                                        /%span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                      %h4.list-group-item-text #{item['title']}
+                                      %h6.list-group-item-text #{item['fb_from_name']}
+                                    %span.btn.btn-social-icon.btn-facebook.shar.b{social:"fb", style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff"}
+                                      %i.fa.fa-facebook.b
+                                    %span.btn.btn-social-icon.btn-twitter.shar.b{social:"twt",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:45px;"}
+                                      %i.fa.fa-twitter.b
+                                    %span.btn.btn-social-icon.btn-google.shar.b{social:"gp",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:90px"}
+                                      %i.fa.fa-google-plus.b
+                                    %span.btn.btn-social-icon.btn-linkedin.shar.b{social:"lkd",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:135px"}
+                                      %i.fa.fa-linkedin.b
+                                    %span.fa.fa-envelope.shar.b{social:"mail",style:"position:absolute;bottom:0;top: initial;margin-bottom:8px;background-color:transparent;border-color:#fff;color:#fff;margin-left:180px"}
+
+
+                              - else
+                                %div.oi
+                                  %a.card-topic{href:"#{item['fb_link']}", target:'_blank',class:"list-group-item","share-link"=>"#{item['qtitle']}",style:"background-image:url(#{item['fb_full_pic']});height: 300px;    text-shadow: 0 0 0.1px #000; color:#fff; background-repeat: no-repeat; background-size: 100% 100%;"}
+                                    %div.b
+                                      %h5.list-group-item-text
+                                        %strong #{topicn}
+                                        /%span.pull-right.glyphicon.glyphicon-share-alt.shar
+                                      %h4.list-group-item-text #{item['title']}
+                                      %h6.list-group-item-text #{item['fb_from_name']}
+                                    %span.btn.btn-social-icon.btn-facebook.shar.b{social:"fb", style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff"}
+                                      %i.fa.fa-facebook.b
+                                    %span.btn.btn-social-icon.btn-twitter.shar.b{social:"twt",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:45px;"}
+                                      %i.fa.fa-twitter.b
+                                    %span.btn.btn-social-icon.btn-google.shar.b{social:"gp",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:90px"}
+                                      %i.fa.fa-google-plus.b
+                                    %span.btn.btn-social-icon.btn-linkedin.shar.b{social:"lkd",style:"position:absolute;bottom:0;top: initial;margin-bottom:10px;background-color:transparent;border-color:#fff;color:#fff;margin-left:135px"}
+                                      %i.fa.fa-linkedin.b
+                                    %span.btn.btn-social-icon.btn-envelope.shar.b{social:"mail",style:"position:absolute;bottom:0;top: initial;margin-bottom:8px;background-color:transparent;border-color:#fff;color:#fff;margin-left:180px"}
+                                      %i.fa.fa-envelope.b
+
+                    %div{:class=>"row", :id=>"e3"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        %a.btn.btn-default{href:"/feed", class:"list-group-item"} Ver meu mural com todas as notícias
+                        %br
+
+                    %div{:class=>"row", :id=>"e2"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        .panel.panel-default
+                          .panel-heading
+                            %h3.panel-title Tópicos em destaque
+
+                          .list-group
+                            %a.card-topic{href:"/topico/Tecnologia", target:'_blank',class:"list-group-item"}
+                              %h4.list-group-item-text Tecnologia
+                            %a{href:"/topico/Esporte", target:'_blank',class:"list-group-item"}
+                              %h4.list-group-item-text Esporte
+                            %a{href:"/topico/Economia", target:'_blank',class:"list-group-item"}
+                              %h4.list-group-item-text Economia
+
+                    %div{:class=>"row", :id=>"e4"}
+                      %div{class:"col-xs-12 col-sm-9 col-md-6 col-lg-5 col-md-offset-2 col-lg-offset-3 col-sm-offset-2 lrg clearfix"}
+                        %div{:class=>"card-topic"}
+                          %ins{class:"adsbygoogle", style:"display:block", "data-ad-client"=>"ca-pub-2932594016137124", "data-ad-slot"=>"4772127690", "data-ad-format"=>"auto"}
+                          :javascript
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                          %br
+
+    %script{:src => "//code.jquery.com/jquery-2.1.4.min.js"}
+    %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/extra.min_m9mwe5.js"}
+    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"}

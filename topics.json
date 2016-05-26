@@ -1,0 +1,117 @@
+{ 
+   "Health and Medicine":[  
+      "Health",
+      "Healthy Eating",
+      "Medicine and Healthcare",
+      "Exercise",
+      "Healthy Living",
+      "Nutrition",
+      "Mental Health"
+   ],
+   "History, Philosophy, Religion, and Humanities":[  
+      "History",
+      "World History",
+      "History of the United States",
+      "Military History and Wars",
+      "World War II",
+      "Philosophy",
+      "Religion"
+   ],
+   "Literature, Languages, and Communication":[  
+      "Books",
+      "Writing",
+      "Literature",
+      "Book Recommendations",
+      "Novels",
+      "Reading",
+      "Fiction",
+      "Literary Fiction"
+   ],
+   "Science, Engineering, and Technology":[  
+      "Technology",
+      "Science",
+      "Technology Trends",
+      "The Universe",
+   ],
+   "Startups":[  
+      "Startups",
+      "Lean Startups",
+      "Startup Founders and Entrepreneurs",
+      "Startup Advice and Strategy",
+      "Venture Capital"
+   ],
+   "Business, Work, and Careers":[  
+      "Business",
+      "Entrepreneurship",
+      "Finance",
+      "Business Strategy",
+      "Marketing",
+      "Investing",
+      "Business Models",
+      "Personal Finance",
+      "Money"
+   ],
+   "Art, Design, and Style":[  
+      "Design",
+      "Photography",
+      "Fashion and Style",
+      "Fine Art",
+      "User Interfaces",
+      "Digital Photography",
+      "Clothing"
+   ],
+   "Recreation, Sports, Travel, and Activities":[  
+      "Travel",
+      "International Travel",
+      "Vacations",
+      "Tourism",
+      "Travel Hacks",
+      "Sports"
+   ],
+   "Education, Schools, and Learning":[  
+      "Education",
+      "Scientific Research",
+      "Higher Education",
+      "Learning",
+      "TED",
+      "Graduate School Education",
+      "The College and University Experience"
+   ],
+   "News, Entertainment, and Pop Culture":[  
+      "Journalism",
+      "Entertainment",
+      "Hollywood",
+      "Movies",
+      "Music",
+      "Musicians",
+      "Television",
+      "Television Series"
+   ],
+   "Life, Relationships, and Self":[  
+      "Dating and Relationships",
+      "Life",
+      "Love",
+      "Humor",
+      "Self-Improvement",
+      "Social Advice",
+      "Tips and Hacks for Everyday Life",
+      "Interpersonal Interaction",
+      "Life Lessons",
+      "Friendship",
+      "Comedy",
+      "Life Advice",
+      "Marriage",
+      "Dating Advice"
+   ],
+   "Politics, Law, Government, and Judiciary":[  
+      "Politics",
+      "Government",
+      "International Relations"
+   ],
+   "Food, Cuisines, and Cooking":[  
+      "Food",
+      "Cooking",
+      "Recipes",
+      "Restaurants"
+   ]
+}

@@ -1,0 +1,55 @@
+!!!
+%html{:lang => "en", "ng-app"=>"home"}
+  %head
+
+    %title brNEWS - As principais notícias do Brasil em tempo real.
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport", "initial-scale"=>1, "maximum-scale"=>1, "minimum-scale"=>1, "user-scalable"=>"no"}
+    %meta{content: "Veja notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país.", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://feed.brnews.co", property: "og:url"}
+    %meta{content: "As principais notícias do Brasil em tempo real.", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "Veja notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país.", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "/css/news-fb.css"
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48117181-1', 'auto');
+      ga('send', 'pageview');
+
+  %body
+    .box
+      .row-fluid.row-offcanvas.row-offcanvas-left
+        .col-xs-12.col-sm-7.col-lg-5.col-md-5{style:'float: none; margin: 0 auto;'}
+          .list-group
+            -@result[:stories].each do |item|
+              -topicn = _topicn(item)
+              %a.list-group-item{href:"#{item['fb_link']}", style:"color:#fff;background-color:#{_bgcolortpc(item)}"}
+                %small <span class="topic">#{topicn}</span> - <span class="source">#{item['fb_from_name']}</span><!--span> - </span><span class="ago"> </span-->
+                %h5.list-group-item-heading{style:'margin-top:10px;color:#fff'} #{item['title']}
+
+
+      .row-fluid
+        .col-xs-12.col-sm-7.col-lg-5.col-md-5{style:'float: none; margin: 0 auto; text-align: center;'}
+          %a.btn{style:'background-color:#4C8EFA;color:#fff', href:"?page=#{@result[:next]}"} Próxima página
+
+
+      %br
+      %br

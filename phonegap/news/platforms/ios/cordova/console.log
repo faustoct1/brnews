@@ -1,0 +1,18 @@
+2015-10-28 17:38:46.638 brNEWS[3463:62685] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/fausto/Library/Developer/CoreSimulator/Devices/95FFB72D-D67C-462C-B8D4-B503357F2797/data/Containers/Data/Application/35498AC6-A800-434A-ABDC-7884C6623198/Library/Cookies/com.linked4.binarycookies
+2015-10-28 17:38:46.938 brNEWS[3463:62685] Apache Cordova native platform version 3.8.0 is starting.
+2015-10-28 17:38:46.938 brNEWS[3463:62685] Multi-tasking -> Device: YES, App: YES
+2015-10-28 17:38:46.941 brNEWS[3463:62685] Unlimited access to network resources
+2015-10-28 17:38:46.948 brNEWS[3463:62685] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-10-28 17:38:47.187 brNEWS[3463:62685] [CDVTimer][admob] 0.536025ms
+2015-10-28 17:38:47.188 brNEWS[3463:62685] [CDVTimer][TotalPluginStartup] 0.762999ms
+2015-10-28 17:38:47.426 brNEWS[3463:62685] Resetting plugins due to page load.
+2015-10-28 17:38:47.702 brNEWS[3463:62685] Finished load of: file:///Users/fausto/Library/Developer/CoreSimulator/Devices/95FFB72D-D67C-462C-B8D4-B503357F2797/data/Containers/Bundle/Application/17DA82CE-A339-416A-921A-D3DFB005F4E3/brNEWS.app/www/index.html
+2015-10-28 17:38:47.783 brNEWS[3463:62765] App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+2015-10-28 17:38:47.789 brNEWS[3463:62685] createBanner

@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<head style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+
+<meta name="viewport" content="width=device-width" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<title style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">brNEWS - Newsletter</title>
+
+
+<style style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+
+/* -------------------------------------
+		GLOBAL
+------------------------------------- */
+* {
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img {
+	max-width: 100%;
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:none;
+	width: 100%!important;
+	height: 100%;
+}
+
+
+/* -------------------------------------
+		ELEMENTS
+------------------------------------- */
+a { color: #2BA6CB;}
+
+.btn {
+	text-decoration:none;
+	color: #FFF;
+	/*background-color: #666;*/
+  background-color: #18bc9c;
+	padding:10px 16px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+
+p.callout {
+	padding:15px;
+	background-color:#ECF8FF;
+	margin-bottom: 15px;
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+table.social {
+/* 	padding:15px; */
+	background-color: #ebebeb;
+
+}
+.social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;font-weight:bold;
+	display:block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+
+.sidebar .soc-btn {
+	display:block;
+	width:100%;
+}
+
+/* -------------------------------------
+		HEADER
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* -------------------------------------
+		BODY
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* -------------------------------------
+		FOOTER
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+
+}
+
+
+/* -------------------------------------
+		TYPOGRAPHY
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul {
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size:14px;
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+/* -------------------------------------
+		SIDEBAR
+------------------------------------- */
+ul.sidebar {
+	background:#ebebeb;
+	display:block;
+	list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+	text-decoration:none;
+	color: #666;
+	padding:10px 16px;
+/* 	font-weight:bold; */
+	margin-right:10px;
+/* 	text-align:center; */
+	cursor:pointer;
+	border-bottom: 1px solid #777777;
+	border-top: 1px solid #FFFFFF;
+	display:block;
+	margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+/* ---------------------------------------------------
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure.
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block;
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap {
+	padding:0!important;
+	margin:0 auto;
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* -------------------------------------------
+		PHONE
+		For clients that support media queries.
+		Nothing fancy.
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;height: 100%;width: 100%!important;">
+
+<table class="head-wrap" bgcolor="#18bc9c" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+<td class="header container" align="" style="margin: 0 auto!important;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"><h3 style="color: #fff;display: table;background-color: red;margin-bottom: 20px;margin-top: 20px;margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;font-weight: 500;font-size: 27px;">brNEWS</h3></td>
+<td align="right" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"><h3 style="color: #fff;margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;font-weight: 500;font-size: 27px;">Newsletter #2</h3></td>
+</tr>
+<!--tr>
+<td align=""></td>
+<td align="right"><h6 style="color:#fff">10/09/2015</h6></td>
+</tr-->
+</table>
+</div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+</tr>
+</table>
+
+<table class="body-wrap" bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+<td class="container" align="" bgcolor="#FFFFFF" style="margin: 0 auto!important;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h2 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 200;font-size: 37px;">Olá, seja bem vindo ao brNEWS!</h2>
+<p class="lead" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 17px;line-height: 1.6;">As principais notícias do Brasil em tempo real!
+
+Confira as notícias de política, economia, esporte, negócios e tecnologia das melhores fontes do país.</p>
+
+<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%; background-size: 600px 300px; background:url('data:image/jpg;base64,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'); background-repeat: no-repeat; height: 300px;"></div>
+</p>
+<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Seja bem vindo essa é sua primeira newsletter. Em nossa newsletter você fica ligado nas nossas novidades que temos. Aqui iremos oferecer para você promoções, prêmios, novas funcionalidades,
+inovações, toda e qualquer novidade que seja de seu interesse. Não perca, acompanhe!</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"><h2 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 200;font-size: 37px;"><u style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">Confira nossas novidades!</u></h2></td>
+</tr>
+</table>
+</div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;"><table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td class="small" width="20%" style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%;background-size: 75px 75px; background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAMAAABibqotAAAAilBMVEWXwCT///////7F25a302vz9+WSvROVvyDr89a10m7x9+GrzFWtzU+gxTfB2XuVvx3f7Lv5+/LY57O92HO71X/2+eujx0Tg7MLq8tH7/PXS46ScwzfF3I/u9dyqzEynyU7V5qiuzV2fxEDc6rapyliuzWKTvQDn8cyItwC/14PI3Zve6r2YwC641Gwh2ZJZAAACrklEQVRYhe2Ya3OqMBCGA9osSnEFgXAt4v2C///vnQQEbaGQWM9MO+N+cWGyz7zZLMlGQl72kBUd76DoettviwltY9wcFTHoOv7XGDpbmqocKEaJiAFESikKF1eR29I4aHS73FKkaGX5Ns8s7uExikGZA5AkJEscFqSpETDn6GdRO2UygjKHGbZWmxfsI1TNjsDEJ0/E65UJd5oUyoKoyUIBafQI13Z8RRDNjVrFDaTrIcuUQNRMtU+QhsVWCjnCmImQsRPeMdJF4nH4UkEOJjwg3R4so1Gl28kBHZEl+cXHLOTxnnswp7fZhctDIVRqqXQxwrIMt/fefW7CIC2FaUdJQejfp6WVas2Q3DzorJpNe90rjpbLCaJrPrisHv2TadeXWiI5sbfO2rlN7DzA4XsNLzK0vLd+C6Ae22mI/sZHAHIZX8Y9dsn5WJJtVthZABgnzGAjruc0GrACrWgfnF3SAQIcieUOT4ePnuRUZtG5+PG6tlmaGeXShsTvh/A1IB/V0u2tdo7opPwIdO3DGuTgohpqZD2cdwnO7MrpOIZenP/BaRfQX+bAs/QsXpwfc8xfosc0qk3OGuaQ92po0GqN+f5MluVxfB7an3WxPwfCC09dRw/60TT0eOc2yNEtms29cDqKO48wLPLJtgAZDkK8nWyKb05CcUYCkeL0nad1wv3e4/3KGTYgnqbfNattP5VryOiif2Ky/Q9vngPbtq8adO7a1wZND7m/7yi+70A7uiNOVbNz8WCWadG82Y7yR1kMEUtXOFVS5wBAa45LQfHmBA2HP2DecNQoXznmjzj6kzjP0vPbOE/JD47Kfl4Tt3iIp6VvbNQvupgxMbHAF4UHrrg420lXozsIMk+MReY10l2ztfvA3wACVKxWpJ4IxKtY9ZtoDO4i4WHKn7Z/ZrE3Xy07XOwAAAAASUVORK5CYII='); height:75px; background-repeat: no-repeat"></div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 500;font-size: 23px;">Lançamento do nosso aplicativo para Android</h4>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Agora você pode conferir as notícias das principais fontes do país na palma da sua mão em qualquer lugar.</p>
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.linked4" target="_blank" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #18bc9c;font-weight: bold;margin-right: 10px;text-align: center;cursor: pointer;display: inline-block;">Baixe no GooglePlay &raquo;</a>
+</td>
+</tr>
+</table></div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;"><table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td class="small" width="20%" style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%;background-size: 75px 75px; background:url('data:image/jpeg;base64,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');height:75px; background-repeat: no-repeat"></div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 500;font-size: 23px;">Lançamento do nosso website</h4>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Fique ligado nas suas notícias preferidas seja esporte, tecnologia, política, economia ou negócios. Confira nosso website.</p>
+<a class="btn" href="http://www.brnews.co" target="_blank" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #18bc9c;font-weight: bold;margin-right: 10px;text-align: center;cursor: pointer;display: inline-block;">Acesse nosso website &raquo;</a>
+</td>
+</tr>
+</table></div>
+
+<!--div class="content"><table bgcolor="">
+<tr>
+<td>
+<p class="callout">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. <a href="#">Do it Now! &raquo;</a> </p>
+</td>
+</tr>
+</table></div-->
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;"><table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td class="small" width="20%" style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%;background-size: 75px 75px; background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgRBhQUEBQQFBIWFRgYFxYYFBcTGxcVFxYXIhUVGhYaHCgmJB0mHBUUJTQtKCwsLjAuGB80RDMsPDQtLisBCgoKDg0OGxAQGywmHx83LCwuLC8sLCwwLCwsLCwsLCwsLywsLCwsLCwsLCwsLCwsLCwsLCwsLCwsNywsLCwsNf/AABEIAEcARwMBEQACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAEDBAYCB//EADMQAAECAwUECQQDAQAAAAAAAAEAAgMEEQUGEiExQVFhcRMiMjVCgZGhsXLB0eFSgvAU/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAUBAwQGAv/EACoRAAEDAwMDAwQDAAAAAAAAAAABAgMEBRESIUETMTMiMlEjQoGhFHGR/9oADAMBAAIRAxEAPwD3FACQAyhVQBIz8AOpAZADoASAEgBIAhmpiHDglzjQD/UCqllbG1XO4PccavdpQyE9akaLFriIbsaDTJcnVV8sr8ouE+B7DSNY3dMqRQ52Yb2XuHmqkrKhvZx7WnjXuhbh2zPDxV5haWXSdvfcpdRRLwWYd4o47TWn2Wll6fy1Cl1ubwpbg3igE9Zrhx1WyK8ROXDkwUPt707KF4MWG+HVpBB2prHI17dTV2MDmq1cKSL2QMgDKXqjvM4G+ECvmdq5y8yu1ozgdW2NNCu5KErZc3El8bACKka0OXBYobfJNHraaZatkbtLitGgxWPo9paeIos81NLH70LmSsf7VOKlUYLMHQe5GckYQ6a9QQrQzdqaeJzB4XD3Cd2eZyP0L2FtwiRW6+TUrpRMJAGQvT3n/ULmLz5UHtt8anNk210EvhcwluImumZ9l7oa7ox6VblAqqPqvyi7h+XnbPmYeHIn+JGacR1ENQmBY+GWBcgW17CfDBfCq5m0bR+kprbVj1xf4MKWv1el/cCBI1ymyjMeqgMBO73ereR+EztSL1jDX+JTZrrBAJAGRvV3iPpHyuYvPlaPLb41LF3ZySEkYcQtBLiaOGRBpt0Wq1TxJFocu+SmvhkWTW1NsE1o3fhkY5c4X60BoDyOwrXPQsf6o9lKIaxzfTJuh3YdsOe7oo+UQZAnLFTUEb/lRS1SuXpS+5P2FTTI1OpH2X9A+8VliHE6Rg6jjmNx/CwXSix9Vn5NdBU6k0OAyR9hmE7ud6t5H4TO1ecw3DxG0XViAZAGSvZ3g36PuuavXkaPLZ41KtlWREmGOOINaDStK1NPhUUNAtQ1XKuELaqsSFUTG5dkpuYlJ8Qopqw6HdXQjgmcUj6SRI3rlqmSSNlTGsjE3QsXpkqMEdmTm0xU2iuTuYV1why1JW90KqGbC9N3ZQhJxWTVk9bxCh4OWiJ6VEG/JnlasE23BjIjHNilp1aSPRcjPF0pFb8HRRv1sR3yE7t96t5Fb7V5zHcPEbJdUIBIAzV7IIOF41GR5JNdqZZGo9vdBpbp0aqtXkF2RbESXJFMTDmRWhB3gpZRV60/pVNjfVUaT7ou5Ba1oOmJrERhaBQCtct5K8V1WtQ5MdkPdLS9BuOVNFK2nJRLHDIkRgeYdCCaGuHinsNZFJDhzkzgUS00jJctauMla5UV3QvadhB9s1RaH+lzc8l9zZu1wOvCzDbL6baO9R+ktu7NM+3Jrt7sw/0XrqyrzMmJ4QKDiStNnp1RyycGe5SppRnJql0QmHQBDMS8N7KOAIUKmSUVUAkxdmVPZxN5H8rFLb4ZN1Q1x10rEwig6NdmIOy/1CxOs0f2qa2XR33IU4thzzdA0+ayOs0jfapobdI17oVzKTrD2XjiK/ZUfwamL25/Bf8Ayqd/dSJ8SO6JmIjnaZgn3K9RUdRM/wCrn8niSphib6P0a+73/U2WDXDLlRdNFGkbUaggkesjtShxWlYkAJACQAxAQAxY3coA56Fm5ADiFD3BGCcnQAUkDoA//9k=');height:75px; background-repeat: no-repeat"></div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 500;font-size: 23px;">Configure seu feed de notícias e exiba as notícias que deseja</h4>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Fique ligado com tópicos que mais te interessam de forma rápida, prática e fácil.</p>
+<a class="btn" href="http://www.brnews.co" target="_blank" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #18bc9c;font-weight: bold;margin-right: 10px;text-align: center;cursor: pointer;display: inline-block;">Configure seu feed &raquo;</a>
+</td>
+</tr>
+</table></div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td class="small" width="20%" style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%;background-size: 75px 75px; background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAMAAABibqotAAAAY1BMVEVzv0T///9puzTe8NJyv0Pt9unz+u9luitvvT1ouy+r15NtvTqk1Imc0IHH47mLy2Pk89u63qbE5LGj1YXQ6MV5wkuVzXjh8Nmc0X2z252LyWTY7cz6/fmRzWvo9ODA4quDxlruxq64AAABNUlEQVRYhe2YbY6DIBBAAVkElXa1utWK1Pufspo1NW0EJ2ViNlneAd6PGeaDIXRCJCHYWUEotWPKQlD53Uwem0sSBlfd5BlCNbPIEKp4sIewhNA0XBM90TMjmYLDpMsj2+sXnGsrXZ6LoHDE5QhPJXMIstrzEA6BADyAPB/o4RIC3/PUGkZ9UN4xPHyoTnCqgbs8oy5W9KiGwoMeXR7ZWrFiC3USHiywTkWW1p/Huc9+qRfPPdum36/T6ZnlvFw8P2zrGYLqdI548/RsTn9ofUVP9ETPiwepTpO1L3j7RrLjMUu3M4vH1Q2Nz1O89cPe2w8L57y4deVKNzBdeuhuznnRnF8Yz14a97z4e3ud+IYhjtrHkPZDrPigeJDyjvW/+Jzo+b8erHsL1v0H6x6FdR+jKPe6BzWHQeumz4nnAAAAAElFTkSuQmCC'); height:75px; background-repeat: no-repeat"></div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 500;font-size: 23px;">Conheça a brNEWS</h4>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Entenda o que é a brNEWS e como as pessoas tem usado. Mais pessoas assim como você usam por diversos motivos, seja para ficar por dentro dos acontecimentos, passatempo ou aumentar o conhecimento.</p>
+<a class="btn" href="http://landing.brnews.co" target="_blank" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #18bc9c;font-weight: bold;margin-right: 10px;text-align: center;cursor: pointer;display: inline-block;">Conheça a brNEWS &raquo;</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td class="small" width="20%" style="vertical-align: top;padding-right: 10px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<div style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 100%;background-size: 75px 75px; background:url('data:image/png;base64,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'); height:75px; background-repeat: no-repeat"></div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 500;font-size: 23px;">Lançamento da nossa newsletter</h4>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Fique ligado nas nossas novidades e fique por dentro de tudo. Assine já! É gratuito.</p>
+<a class="btn" href="http://landing.brnews.co#last" target="_blank" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #18bc9c;font-weight: bold;margin-right: 10px;text-align: center;cursor: pointer;display: inline-block;">Assine nossa newsletter &raquo;</a>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<hr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+</div>
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table bgcolor="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+
+<table bgcolor="" class="social" width="100%" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;background-color: #ebebeb;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+
+<div class="column" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 280px;float: left;min-width: 279px;">
+<table bgcolor="" cellpadding="" align="left" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h5 class="" style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 900;font-size: 17px;">Seguir brNEWS no:</h5>
+<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="https://www.facebook.com/brnewsco" class="soc-btn fb" style="margin: 0;padding: 3px 7px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;font-size: 12px;margin-bottom: 10px;text-decoration: none;font-weight: bold;display: block;text-align: center;background-color: #3B5998!important;">Facebook</a> <br style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"> <a href="https://twitter.com/brnewsco" class="soc-btn tw" style="margin: 0;padding: 3px 7px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;font-size: 12px;margin-bottom: 10px;text-decoration: none;font-weight: bold;display: block;text-align: center;background-color: #1daced!important;">Twitter</a> <!--a href="#" class="soc-btn gp">Google+</a--></p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="column" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 280px;float: left;min-width: 279px;">
+<table bgcolor="" cellpadding="" align="left" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<h5 class="" style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;font-weight: 900;font-size: 17px;">Contato Info:</h5>
+<!--p>Phone: <strong>408.341.0600</strong><br/-->
+Email: <strong style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"><a href="mailto:contact@brnews.co" target="_top" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #2BA6CB;">contact@brnews.co</a></strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="clear" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;display: block;clear: both;"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+</tr>
+</table>
+
+<table class="footer-wrap" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;clear: both!important;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+<td class="container" style="margin: 0 auto!important;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;display: block!important;max-width: 600px!important;clear: both!important;">
+
+<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;max-width: 600px;display: block;">
+<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;width: 100%;">
+<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<td align="center" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;">
+<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">
+<a href="http://www.brnews.co/termos" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #2BA6CB;">Termos</a> |
+<a href="http://www.brnews.co/privacidade" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #2BA6CB;">Privacidade</a>
+<!--a href="#"><unsubscribe>Unsubscribe</unsubscribe></a-->
+</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;"></td>
+</tr>
+</table>
+</body>
+</html>

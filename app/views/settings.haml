@@ -1,0 +1,131 @@
+!!!
+%html{:lang => "en"}
+  %head
+
+    %title Linked
+    / We help people making their lives easier to have a top quality content in education, sports and entertainment
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{content: "", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://www.4linked.com/", property: "og:url"}
+    %meta{content: "", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//res.cloudinary.com/hpoyywmsy/raw/upload/basic-min_rsjw89.css" rel="stylesheet" type="text/css" />
+    <link href="//res.cloudinary.com/hpoyywmsy/raw/upload/hacks-min_eczk8q.css" rel="stylesheet" type="text/css" />
+    <link href="//res.cloudinary.com/hpoyywmsy/raw/upload/settings-min_euewog.css" rel="stylesheet" type="text/css" />
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48117181-1', 'auto');
+      ga('send', 'pageview');
+
+  %body
+    %div#fb-root
+      :javascript
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=524656474329640&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+
+    .wrapper
+      .box
+        .row.row-offcanvas.row-offcanvas-left
+          #main.column.col-sm-12.col-xs-12
+            /= partial "bar"
+
+            - unless @user.nil?
+              .container.profile
+                .col-sm-6.col-sm-offset-3
+                  .row.full
+                    - pic = @user[:user_profiles][:facebook][:pic]
+                    - pic = @user[:user_profiles][:linkedin][:pic] if pic.nil?
+                    - pic = @user[:user_profiles][:google_oauth2][:pic] if pic.nil?
+                    %img.img{src:"#{pic}"}
+
+                    /- f_name = @user[:user_profiles][:facebook][:info][:first_name] unless @user[:user_profiles][:facebook][:info].nil?
+                    /- f_name = @user[:user_profiles][:linkedin][:info][:first_name] if f_name.nil? && !@user[:user_profiles][:linkedin][:info].nil?
+                    /- f_name = @user[:user_profiles][:google_oauth2][:info][:first_name] if f_name.nil? && !@user[:user_profiles][:google_oauth2][:info].nil?
+
+                    /- l_name = @user[:user_profiles][:facebook][:info][:last_name]  unless @user[:user_profiles][:facebook][:info].nil?
+                    /- l_name = @user[:user_profiles][:linkedin][:info][:last_name] if l_name.nil? && !@user[:user_profiles][:linkedin][:info].nil?
+                    /- l_name = @user[:user_profiles][:google_oauth2][:info][:last_name] if l_name.nil? && !@user[:user_profiles][:google_oauth2][:info].nil?
+
+                    - gender = @user[:user_profiles][:facebook][:info][:gender] unless @user[:user_profiles][:facebook][:info].nil?
+                    - gender = @user[:user_profiles][:linkedin][:info][:gender] if gender.nil? && !@user[:user_profiles][:linkedin][:info].nil?
+                    - gender = @user[:user_profiles][:google_oauth2][:info][:gender] if gender.nil? && !@user[:user_profiles][:google_oauth2][:info].nil?
+
+                    - name = @user[:user_profiles][:facebook][:info][:name] unless @user[:user_profiles][:facebook][:info].nil?
+                    - name = @user[:user_profiles][:linkedin][:info][:name] if name.nil? && !@user[:user_profiles][:linkedin][:info].nil?
+                    - name = @user[:user_profiles][:google_oauth2][:info][:name] if name.nil? && !@user[:user_profiles][:google_oauth2][:info].nil?
+
+                    %h3
+                      %span
+                        #{name}, #{gender.capitalize}
+
+                  .row.full
+                    %h4 Topics
+                    - @user[:user_profiles][:interests].each do |interest|
+                      %a{href:"#"} #{interest[:name]}
+                      %br
+
+                    /- @user[:user_profiles][:facebook][:interests].each do |interest|
+                    /  %p.content.bg-warning #{interest[:name]}
+                    /- @user[:user_profiles][:google_oauth2][:interests].each do |interest|
+                    /  %p.content.bg-warning #{interest[:snippet][:title]}
+
+                  .row.full
+                    /%h3 Make your profile awesome adding more accounts.
+                    /%h5 All content shown in your feed is based on your interests. So you can improve your feed experience adding more sources and this can make our content engine grab contents that fits better in your taste.
+                    /%h5 Why should I connect other profile?
+                    /%h5 When you connect other profile don't being the main profile. We can know more about your preferences and interests. Based on these infos we can provide a better and curated content that fits better in your taste.
+                    %h4 Linked accounts
+                  .row{style:"text-align: center;"}
+                    .back0.btn-sign.pull-left
+                      %a#login{:href => "/auth/facebook",style:"width:120px", class:"btn btn-primary btn-md #{!@user[:user_profiles][:facebook][:pic].nil? ? 'disabled':''}" }
+                        %span{class:"#{!@user[:user_profiles][:facebook][:pic].nil? ? 'glyphicon glyphicon-ok green-ok pull-left':''}"}
+                        %span #{@user[:user_profiles][:facebook][:pic].nil? ? 'Facebook':'Facebook'}
+
+                  %br
+
+                  .row{style:"text-align: center;"}
+                    .back0.btn-sign.pull-left
+                      %a#login{:href => "/auth/google_oauth2",style:"width:120px", class:"btn btn-primary btn-md #{!@user[:user_profiles][:google_oauth2][:pic].nil? ? 'disabled':''}" }
+                        %span{class:"#{!@user[:user_profiles][:google_oauth2][:pic].nil? ? 'glyphicon glyphicon-ok green-ok pull-left':''}"}
+                        %span #{@user[:user_profiles][:google_oauth2][:pic].nil? ? 'Google':'Google'}
+
+                /%br
+                /.row{style:"text-align: center;"}
+                /  .col-md-3.btn-sign
+                /    %a#login{:href => "/auth/linkedin",style:"width:100%", class:"btn btn-primary btn-lg #{@user[:user_profiles].key?(:linkedin) ? 'disabled ':''}" } #{@user[:user_profiles].key?(:linkedin) ? 'Signed up with Linkedin':'Sign up with Linkedin'}
+
+                /.col-md-3.btn-sign
+                /  %a#login.btn.btn-primary.btn-lg{:href => "/auth/linkedin"} Sign up with Linkedin
+                /.col-md-3.btn-sign
+                /  %a#login.btn.btn-primary.btn-lg{:href => "/auth/twitter"} Sign up with Twitter
+
+
+    %script{:src => "//code.jquery.com/jquery-2.1.4.min.js"}
+    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"}

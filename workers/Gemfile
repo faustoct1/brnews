@@ -1,0 +1,20 @@
+source 'https://rubygems.org'
+
+ruby "2.1.2"
+
+gem 'padrino', '0.12.4'
+gem 'mongoid'
+gem 'redis',       :require => 'redis'
+gem 'rest-client'
+
+gem "koala" #facebook
+gem "google-api-client" #google
+gem "linkedin" #linkedin
+gem "instagram" #instagram
+gem "twitter" #twitter
+
+# worker background processing
+gem 'iron_worker_ng'
+#WORKAROUND USE THIS ONLY TO UPADATE WORKERS. REMOVE THIS WHEN SUPPORTS RUBY 2.2
+gem "json", "1.8.1"
+gem "pg"

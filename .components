@@ -1,0 +1,10 @@
+---
+:orm: activerecord
+:test: none
+:mock: none
+:script: none
+:renderer: haml
+:stylesheet: less
+:namespace: Linked4
+:migration_format: number
+:admin_renderer: haml

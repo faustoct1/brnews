@@ -1,0 +1,113 @@
+
+/* Start Bootstrap - Small Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.nopad{
+  padding:0px;
+}
+
+.bar{
+  /*background-color: #f4f4f4 ;*/
+  background-color: white ;
+}
+
+.x{
+  border-bottom:solid 4px red;
+  padding-bottom: 10px !important;
+  background-color: #f4f4f4 ;
+}
+
+
+
+.bar-item a{
+  font: 13px "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  color: #777;
+  float:left;
+}
+
+.time{
+  position:absolute;
+  margin-bottom:0px;
+  margin-top:-45px;
+  right:0;
+  padding:2px;
+  margin-right:5px;
+  /*background-color:rgba(3, 3, 3, 0.5);*/
+  color:#F00;
+  font-style: italic;
+  font-size:8px;
+}
+
+.brand{
+  position:absolute;
+  margin-bottom:0px;
+  margin-top:-45px;
+  padding:2px;
+  margin-right:5px;
+  /*background-color:rgba(3, 3, 3, 0.5);*/
+  color:#bbb;
+  font-style: italic;
+
+}
+
+.time-m{
+  margin-left:7.5em;
+}
+
+.item-footer{
+  padding-bottom:0px;
+  border: 1px solid #eee;
+  padding:0px;
+}
+
+body{
+  margin-top:70px;
+}
+
+.bgb{
+  background-color:black;
+}
+
+.mask{
+  width:92%;
+}
+
+.mask-zero{
+  width:100%;
+}
+
+.desc-txt{
+  margin-left: 5px;
+  margin-bottom:0;
+  color:white;
+  margin-top: 2px;
+}
+
+.desc-main{
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  position:absolute;
+}
+
+.link-hd{
+  float:left;
+}
+
+@media(max-width:768px) {
+  .pgh{
+    padding-bottom: 0px;
+    margin: 0;
+  }
+
+  .zero{
+    padding:0px;
+    margin:0px;
+  }
+
+  .mask{
+    width:90%;
+  }
+
+}

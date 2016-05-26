@@ -1,0 +1,14 @@
+npm/**/*
+.DS_Store
+log/**/*
+tmp/**/*
+bin/*
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+db/*.db
+.project
+iron.json
+phonegap/4linked/platforms/ios/cordova/console.log
+phonegap/brnews.zip
+phonegap/4linked/platforms/android/

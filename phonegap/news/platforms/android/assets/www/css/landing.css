@@ -1,0 +1,143 @@
+/*!
+ * Start Bootstrap - Small Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.backg{
+	background: url(../img/bbs_1500.jpg) no-repeat;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-fixed-top .nav {
+  padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+  padding: 0 15px;
+}
+
+@media(max-height:600px) {
+	footer {
+		width: 100%;
+	  padding-top: 400px;
+	  color: #fff;
+	  text-align: center;
+	}
+}
+
+@media(min-height:601px) {
+	footer {
+		width: 100%;
+	  padding-top: 450px;
+	  color: #fff;
+	  text-align: center;
+	}
+
+}
+
+@media(min-width:768px) {
+  body {
+      padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+  }
+
+  .navbar-fixed-top .navbar-brand {
+      padding: 15px 0;
+  }
+}
+
+@media(max-width:768px) {
+  /*.intro{
+    margin: 15px;
+  }*/
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size:26px;
+  }
+  p{
+    font-size:14px;
+  }
+}
+
+@media(max-width:992px) {
+  /*.intro{
+    margin: 15px;
+  }*/
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size:26px;
+  }
+  p{
+    font-size:14px;
+  }
+}
+
+
+.btn-sign{
+	padding-top:10px;
+	float: none;
+  margin: 0 auto;
+}
+
+.btn-sign > a{
+	border-color: #fff;
+	color: #fff;
+	width:100%;
+	background-color: transparent;
+}
+
+
+.intro{
+	/*background-color: rgba(255,255,255,0.8);*/
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+}
+
+.hintro{
+	left:0;
+	position: absolute;
+	top: 10%;
+}
+
+.tcenter{
+	text-align:center;
+}
+
+@media(max-width:480px) {
+	.intro{
+	  margin: 15px;
+	}
+	h1{
+	  font-size: 24px;
+	}
+	h2{
+	  font-size:18px;
+	}
+	p{
+	  font-size:14px;
+	}
+}
+
+.limg{
+	height:600px;
+}

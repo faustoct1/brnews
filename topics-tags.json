@@ -1,0 +1,32 @@
+{
+	"pt_BR":{
+		"topics":[
+			"Política",
+			"Economia",
+			"Cultura",
+			"Esporte",
+			"Ambiente",
+			"Educação",
+			"Tecnologia",
+			"Empreendedorismo",
+			"Música",
+			"Música Blacl",
+			"Computer Science",
+			"Diversão",
+			"Engineering"
+		],
+		"social":[
+			"Youtube",
+			"Wikipedia",
+			"Facebook",
+			"Google",
+			"Instagram",
+			"Pinterest",
+			"Twitter",
+			"Linkedin"
+		],
+		"Línguas":[
+			"Portguês", "Inglês"
+		]
+	}
+}

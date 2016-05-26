@@ -1,0 +1,142 @@
+!!!
+%html{:lang => "en", "ng-app"=>"home"}
+  %head
+
+    %title Blog brNEWS - O agregador de notícias em tempo em tempo real.
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport", "initial-scale"=>1, "maximum-scale"=>1, "minimum-scale"=>1, "user-scalable"=>"no"}
+    %meta{content: "Blog brNEWS - O blog do agregador de notícias em tempo real.", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://blog.brnews.co", property: "og:url"}
+    %meta{content: "Conheça o blog da brNEWS. O blog do agregador de notícias em tempo em tempo real.", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "Conheça o blog da brNEWS. O blog do agregador de notícias em tempo em tempo real.", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+    %meta{content: "723248877786841", property: "fb:app_id"}
+    %meta{content: "http://res.cloudinary.com/hpoyywmsy/image/upload/v1453723315/blogging_n2ie6l.jpg", property: "og:image"}
+
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/index.min_nlaeiw.css"
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-65575834-1', 'auto');
+      ga('send', 'pageview');
+
+  %body
+    = render "partials/_blog-header"
+
+    .container
+      .row
+        .col-md-12
+          %h1
+            %u Blog brNEWS
+
+      .row
+        .col-md-12
+          %a{href:"/blog/O-que-e-a-brNEWS"}
+            %h3 O que é a brNEWS?
+          %p
+            %i publicado em 09/04/2015
+          %p A brNEWS é um agregador de notícias em tempo real. Ele foi criado com a ideia de ser um agregador leve e simples porém muito robusto e que atenda a necessidade de qualquer pessoal interessada em notícia. Ele funciona coletando dados do facebook e website... <span><a href="/blog/O-que-e-a-brNEWS">(ler mais)</a></span>
+
+      .row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Lançamento do website
+          %p
+            %i publicado em 10/05/2015
+          %p A brNEWS um agregador de notícias em tempo real. Agora tempos nosso website apesar de simples com um feed de notícias muito inteligentes e permite que pessoas acessem conteúdos de notícias de redes sociais através do website... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Lançamento do aplicativo
+          %p
+            %i publicado em 20/06/2015
+          %p A brNEWS agora conta com o lançamento de seu aplicativo. Agora qualquer pessoal pode acessar o melhor conteúdo das principais fontes de onde estiver e na palma da sua mão. Apesar de funcionalidades simples é um passo enorme... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Feed agregador e feed infinito
+          %p
+            %i publicado em 30/06/2015
+          %p Feed agregador permite você visualizar as principais notícias das principais fontes de notícias em tempo real. O feed infinito permite você visualizar as principais notícias sem limite e em ordem cronológica começando pelas mais recentes... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Compartilhamento em redes sociais
+          %p
+            %i publicado em 11/08/2015
+          %p Agora é possível compartilhar suas notícias com os amigos na sua rede social preferida. Seja twitter, facebook, google plus, linkedin ou email agora você vai poder compartilhar sua notícia favorita nas principais redes sociais ou por email de forma fácil e rápida... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Customizar suas preferências de notícias
+          %p
+            %i publicado em 20/08/2015
+          %p Visando proporcionar a melhor experiência e personalização aos usuários, criamos uma seção que permite o usuário configurar as principais notícias entre os cinco tópicos: economia, política, negócios, tecnologia e esporte. Selecionando os tópicos que deseja seu... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Novo feed de notícias
+          %p
+            %i publicado em 13/09/2015
+          %p O novo feed da brnews permite você visualizar as notícias de um jeito mais simples e direto. Agora exibimos uma imagem relacionada ao título da notícia e as principais redes sociais para compartilhamento da notícia. Também o feed é carregado mais rápido proporcionando... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Lançamento do auto post nas redes sociais & Resumão do dia
+          %p
+            %i publicado em 05/11/2015
+          %p Para proporcionar a melhor serviço a nossos usuários criamos um auto post nas redes sociais. Com auto post queremos manter próximos a audiência das principais notícias, mesmo perdendo as notícias do dia mesmo assim você conseguirá acompanhar o que aconteceu ao longo do dia... <span><a href="/">(ler mais)</a></span>
+
+      -#.row
+        %hr
+
+      -#.row
+        .col-md-12
+          %h3 Sistema de notificação (notificação push)
+          %p
+            %i publicado em 21/01/2015
+          %p Para criar um novo canal de comunicação entre<span><a href="/">(ler mais)</a></span>
+
+    .container-fluid
+      .row-fluid
+        %footer
+          .row
+            .col-lg-12.text-center
+              %p Copyright © brNEWS 2015

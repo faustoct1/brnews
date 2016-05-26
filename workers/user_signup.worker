@@ -1,0 +1,26 @@
+# define the runtime language, this can be ruby, java, node, php, go, etc.
+
+runtime 'ruby', '2.1'
+exec "user_signup.rb"
+
+gemfile 'Gemfile'
+
+#dir '../../4linked-base', '__gems__/gems'
+#file '../../4linked-base/4linked-base.gemspec', '__gems__/specifications'
+
+#gem '4linked-base', '0.0.1'
+
+file '../mongo/rank/rankable.rb'
+file '../mongo/auth/provider.rb'
+file '../mongo/executor/chain_executor.rb'
+file '../mongo/executor/feed_lookup.rb'
+file '../mongo/executor/profile_lookup.rb'
+file '../mongo/models/user/user.rb'
+file '../mongo/models/user/activity/fb_like.rb'
+file '../mongo/models/user/activity/ytb_subscription.rb'
+file '../mongo/models/content/rank/fb_page.rb'
+file '../mongo/models/content/rank/ytb_channel.rb'
+file '../config/mongodb.rb'
+
+remote
+#build 'bundle install --standalone'

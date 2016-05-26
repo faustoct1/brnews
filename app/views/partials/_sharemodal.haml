@@ -1,0 +1,27 @@
+#sharemodal.modal.fade{"aria-labelledby" => "modalshare", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+        %h4#modalshare.modal-title Compartilhe sua notícia
+      .modal-body
+        .container
+          #content2share.hidden{"data-description" => "", "data-title" => "", "data-url" => ""}
+          .row
+            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+              %button.btn-lg.btn-social.btn.btn-primary{"data-toolttip-text" => "Share to Facebook. Opens in a new window.", :onclick => "socialshare('fb',$('#content2share').data('title'),$('#content2share').data('url'))", :title => "Share to Facebook. Opens in a new window."} Facebook
+          .row
+            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+              %button.btn-lg.btn-social.btn.btn-twt{"data-toolttip-text" => "Share to Twitter. Opens in a new window.", :onclick => "socialshare('twt',$('#content2share').data('title'),$('#content2share').data('url'))", :title => "Share to Twitter. Opens in a new window."} Twitter
+          .row
+            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+              %button.btn-lg.btn-social.btn.btn-gp{"data-toolttip-text" => "Share to Google+. Opens in a new window.", :onclick => "socialshare('gp',$('#content2share').data('title'),$('#content2share').data('url'))", :title => "Share to Google+. Opens in a new window."} Google+
+          .row
+            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+              %button.btn-lg.btn-social.btn.btn-primary{"data-toolttip-text" => "Share to Linkedin. Opens in a new window.", :onclick => "socialshare('lkd',$('#content2share').data('title'),$('#content2share').data('url'))", :title => "Share to Linkedin. Opens in a new window."} Linkedin
+          .row
+            .col-md-12.col-sm-12.col-lg-12.col-xs-12
+              %button.btn-lg.btn-social.btn.btn-default{"data-toolttip-text" => "Share to Email. Opens in a new window.", :onclick => "socialshare('mail',$('#content2share').data('title'),$('#content2share').data('url'))", :title => "Share to Email. Opens in a new window."} Email
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Fechar

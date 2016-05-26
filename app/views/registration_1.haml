@@ -1,0 +1,134 @@
+!!!
+%html{:lang => "en"}
+  %head
+
+    %title Linked
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{content: "", name: "description"}
+    %meta{content: "", name: "keywords"}
+    %meta{content: "http://www.4linked.com/", property: "og:url"}
+    %meta{content: "", property: "og:title"}
+    %meta{content: "", property: "og:site_name"}
+    %meta{content: "", property: "og:description"}
+    %meta{content: "website", property: "og:type"}
+
+
+    :plain
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lato:300,400,700"
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    = stylesheet_link_tag "//res.cloudinary.com/hpoyywmsy/raw/upload/basic-min_rsjw89.css"
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48117181-1', 'auto');
+      ga('send', 'pageview');
+
+  %body
+    %form{action:"/auth/registration/1?mobile=#{locals[:mobile]}&nosignup=#{locals[:nosignup]}", method:"Post" }
+      .container
+        /.row
+        /  .col-md-12
+        /    %h3 Selecione pelo menos 3 tópicos
+        /    /%h3 Link with topics that you like!
+        .row
+          .col-md-12
+            %h5
+              %strong Selecione pelos menos 1 tópico em destaque
+
+            -@topics.each do |t|
+              %p.registrationp
+                %a.btn.btn-sm.btn-primary.clickable{href: "#", "data-value":"#{t[:id]}", "data-type":"topics"} #{t[:name]}
+
+        - unless locals[:nosignup]
+          .row
+            .col-md-12
+              %h5
+                %strong Adicionar ao meu portal conteúdo de
+                /%strong Add to my feed content from
+              - @content.each do |k,v|
+                %p.registrationp
+                  %a.btn.btn-sm.btn-primary.clickable.disabled{href: "#","data-value":"#{k}", "data-type":"type"} #{v}
+
+              /%h5
+              /  %strong Load my feed from social media
+              /-['Facebook', 'Google', 'Instagram', 'Pinterest', 'Twitter', 'Linkedin'].each do |i|
+              /  %p
+              /    %a.btn.btn-sm.btn-primary.clickable.disabled{href: "#","data-value":"#{i}", "data-type":"social"} #{i}
+
+          .row
+            .col-md-12
+              %h5
+                %strong Mostrar conteúdo em
+                /%strong Language setup - Show content in
+              - @languages.each do |k,v|
+                %p.registrationp
+                  %a.btn.btn-sm.btn-primary.clickable.disabled{href: "#", "data-value":"#{k}", "data-type":"language"} #{v}
+        %p
+        %p
+        .row
+          .col-md-12.center
+            %button.btn.btn-lg.btn-primary.clickable{type:"submit"} Continuar
+
+  %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+  %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"}
+  %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"}
+  %script{:src => "//res.cloudinary.com/hpoyywmsy/raw/upload/waiting-bootstrap_eyigdg.js"}
+  %script{:src => "//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"}
+
+  :javascript
+    var options = {topics:[],type:['website', 'youtube', 'wikipedia' ],social:[],language:['us', 'pt']};
+    $('a').click(function(e){
+      event.preventDefault();
+      event.stopPropagation();
+
+      var has = $(this).hasClass("disabled")
+      if(has){
+        $(this).removeClass('disabled')
+        var array=options[$(this).data('type')];
+        var i = array.indexOf($(this).data('value'));
+        if(i != -1) array.splice(i, 1);
+        options[$(this).data('type')]=array;
+      }
+      else{
+        $(this).addClass('disabled')
+        options[$(this).data('type')].push($(this).data('value'));
+      }
+    });
+
+    $('form').submit(function(){
+      $('<input type="hidden" name="json"/>').val(JSON.stringify(options)).appendTo('form')
+
+      var submit= true;
+      var msg = "Selecione pelo menos 1 tópico.";
+
+      if(options['topics'].length<1) {
+        //msg += "\n3 Topics";
+        submit=false;
+      }
+      if(options['type'].length<1) {
+        msg += "\n1 Feed Content";
+        submit=false;
+      }
+      if(options['language'].length<1) {
+        msg += "\n1 Language";
+        submit=false;
+      }
+
+      if(!submit)alert(msg);
+      else waitingDialog.show('Criando seu Feed de Notícias', {dialogSize: 'sm'});
+
+      return submit;
+    });
