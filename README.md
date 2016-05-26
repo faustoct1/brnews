@@ -1,7 +1,7 @@
 # brNEWS
 brNEWS is a realtime feed aggregator of most important news from best sources (available only in Portuguese).
 
-brNEWS is a personal project where I was looking for learning some new tech thing, build something from scretch and deliver high quality content/news/information to people around me. This project has not been discontinued, it and two other projects (I'll open the source soon) I was working on simultaneously I decide to work in just on project including these three ones, where I've been working fulltime. In this code has a lot that in 4Linked's source code.
+brNEWS is a personal project where I was looking for learning some new tech thing, build something from scratch and deliver high quality content/news/information to people around me. This project has not been discontinued, it and two other projects (I'll open the source soon) I was working on simultaneously I decide to work in just on project including these three ones, where I've been working fulltime. In this code has a lot that in 4Linked's source code.
 
 
 --
