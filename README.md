@@ -69,7 +69,7 @@ Setup:
 
 if you liked it or are interested to know about my new project follow on social medias 
 
-► facebook: 4Linked 
+► facebook: https://facebook.com/4Linked 
 
 ► twitter: https://twitter.com/4linked_ 
 
