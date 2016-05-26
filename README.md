@@ -5,7 +5,9 @@ brNEWS is a personal project where were looking for learning some new tech thing
 
 brNEWS features :
 ► Available for website & android
+
 ► Built with padrino framework
+
 ► Hosted on heroku (Free plan) with Cloudinary + Postgres + Redis To Go + Heroku Scheduler + SendGrid + Web dynos + Worker dynos
 ► Crawling social networks facebook, youtube, instagram, linkedin e twitter often
 ► Adsense to phonegap e web
