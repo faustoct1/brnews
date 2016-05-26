@@ -55,10 +55,15 @@ Links:
 Setup: 
 
 ►Setup heroku account 
+
 ►Setup heroku account google dev account
+
 ►Download the source from github
+
 ►set variables like db connection, push system, redis.
+
 ►run local and remote / web and phonegap.
+
 
 --
 
