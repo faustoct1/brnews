@@ -81,5 +81,6 @@ if you liked it or are interested to know about my new project follow on social 
 Leave your feedback, comments or what you'd do different that will help me in my new project. If you implement it to iOS let me know
 
 
+
 Cheers,
 Fausto
